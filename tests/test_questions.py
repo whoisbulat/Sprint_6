@@ -3,6 +3,7 @@ from pages.main_page import MainPageHelper
 
 
 
+
 class TestQuestion:
     @pytest.mark.parametrize('number, result',
                              [(0, 'Сутки — 400 рублей. Оплата курьеру — наличными или картой.'),

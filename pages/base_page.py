@@ -33,6 +33,7 @@ class BasePage:
             expected_conditions.visibility_of_element_located(locator))
         self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
 
+
     def set_text_to_element(self, locator, text):
         self.driver.find_element(*locator).send_keys(text)
 

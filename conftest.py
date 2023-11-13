@@ -5,6 +5,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 
 
 
+
 @pytest.fixture
 def driver():
         service = GeckoDriverManager().install()

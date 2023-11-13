@@ -41,6 +41,7 @@ class MainPageHelper(BasePage):
         self.scroll_to_element(MainPageLocators.LOCATOR_ORDER_BTN_ON_CONTENT)
         self.click_to_element(MainPageLocators.LOCATOR_ORDER_BTN_ON_CONTENT)
 
+
     def find_home_header(self):
         home_header = self.find_element(MainPageLocators.LOCATOR_HOME_STATUS)
         return home_header.text

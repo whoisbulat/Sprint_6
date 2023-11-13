@@ -13,7 +13,6 @@ class TestLogo:
         time.sleep(5)
         assert base_page.get_current_url() == 'https://dzen.ru/?yredirect=true'
 
-
     def test_Scooter_logo_redirects_to_main_page(self, driver):
         main_page = MainPageHelper(driver)
         base_page = BasePage(driver)

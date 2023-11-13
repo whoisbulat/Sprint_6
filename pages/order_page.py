@@ -12,11 +12,9 @@ class OrderPageLocators:
     LOCATOR_METRO_DROP = By.XPATH, "//div[contains(text(),'Сокольники')]"
     LOCATOR_PHONE_INPUT = By.XPATH, "//input[@placeholder='* Телефон: на него позвонит курьер']"
     LOCATOR_NEXT_BATTON = By.XPATH, "//button[contains(text(),'Далее')]"
-
     LOCATOR_DATA_INPUT = By.XPATH, "//input[@placeholder='* Когда привезти самокат']"
     LOCATOR_RENT_PERIOD_INPUT = By.XPATH, "//div[contains(text(),'* Срок аренды')]"
     LOCATOR_DROP_DOWN_RENT_PERIOD = By.XPATH, "//div[contains(text(),'сутки')]"
-
     LOCATOR_COLOR_SCOOTER_BLACK = By.XPATH, "//input[@id='black']"
     LOCATOR_COMMENT_INPUT = By.XPATH, "//input[@placeholder='Комментарий для курьера']"
     LOCATOR_ORDER_BATTON = By.XPATH, "//button[@class='Button_Button__ra12g Button_Middle__1CSJM']"

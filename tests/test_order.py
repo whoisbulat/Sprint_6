@@ -24,7 +24,6 @@ class TestOrder:
         order_page.create_order(first_name, last_name, adress, phone, data, comment)
         assert 'Заказ оформлен' in order_page.check_success_order()
 
-
     def test_order_page_transition_from_bottom_button(self, driver):
         base_page = BasePage(driver)
         main_page = MainPageHelper(driver)
