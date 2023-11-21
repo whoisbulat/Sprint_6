@@ -20,6 +20,8 @@ class OrderPageLocators:
     LOCATOR_ORDER_BATTON = By.XPATH, "//button[@class='Button_Button__ra12g Button_Middle__1CSJM']"
     LOCATOR_YES_BATTON_ON_CONFIRM_MODAL = By.XPATH, "//button[contains(text(),'Да')]"
     LOCATOR_ORDER_MODAL = By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ']"
+    LOCATOR_LABEL_ON_ORDER_PAGE = By.XPATH, "//div[contains(text(), 'Для кого самокат')]"
+
 
 
 class OrderPageHelper(BasePage):
@@ -78,6 +80,11 @@ class OrderPageHelper(BasePage):
     def check_success_order(self):
         order_modal = self.find_element(OrderPageLocators.LOCATOR_ORDER_MODAL)
         return order_modal.text
+
+    @allure.step('Проверяем, что открылась страница заказа')
+    def check_order_page_transition(self):
+        main_text_in_order_page = self.find_element(OrderPageLocators.LOCATOR_LABEL_ON_ORDER_PAGE)
+        return main_text_in_order_page.text
 
 
     def create_order(self, first_name, last_name, adress, phone,data,comment):

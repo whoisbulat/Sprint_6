@@ -11,18 +11,18 @@ class MainPageLocators:
     LOCATOR_HOME_STATUS = By.CLASS_NAME, "Home_Header__iJKdX"
 
 
-class MainPageHelper(BasePage):
 
-    def get_question(self, num):
+class MainPageHelper(BasePage):
+    def get_question(self, query_list):
         method, locator = MainPageLocators.LOCATOR_QUESTION
-        locator = locator.format(num)
+        locator = locator.format(query_list[0])
         self.find_element((method, locator))
         self.scroll_to_element((method, locator))
         self.click_to_element((method, locator))
 
-    def get_answer(self, num):
+    def get_answer(self, query_list):
         method, locator = MainPageLocators.LOCATOR_ANSWER
-        locator = locator.format(num)
+        locator = locator.format(query_list[0])
         answer = self.find_element((method, locator))
         return answer.text
 
@@ -49,7 +49,7 @@ class MainPageHelper(BasePage):
     def close_cookie(self):
         self.click_to_element(MainPageLocators.LOCATOR_COOKIE)
 
-
-
+    def go_to_site(self):
+        return self.driver.get(self.base_url)
 
 
