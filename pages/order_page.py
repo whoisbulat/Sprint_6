@@ -12,16 +12,16 @@ class OrderPageLocators:
     LOCATOR_METRO_DROP = By.XPATH, "//div[contains(text(),'Сокольники')]"
     LOCATOR_PHONE_INPUT = By.XPATH, "//input[@placeholder='* Телефон: на него позвонит курьер']"
     LOCATOR_NEXT_BATTON = By.XPATH, "//button[contains(text(),'Далее')]"
-
     LOCATOR_DATA_INPUT = By.XPATH, "//input[@placeholder='* Когда привезти самокат']"
     LOCATOR_RENT_PERIOD_INPUT = By.XPATH, "//div[contains(text(),'* Срок аренды')]"
     LOCATOR_DROP_DOWN_RENT_PERIOD = By.XPATH, "//div[contains(text(),'сутки')]"
-
     LOCATOR_COLOR_SCOOTER_BLACK = By.XPATH, "//input[@id='black']"
     LOCATOR_COMMENT_INPUT = By.XPATH, "//input[@placeholder='Комментарий для курьера']"
     LOCATOR_ORDER_BATTON = By.XPATH, "//button[@class='Button_Button__ra12g Button_Middle__1CSJM']"
     LOCATOR_YES_BATTON_ON_CONFIRM_MODAL = By.XPATH, "//button[contains(text(),'Да')]"
     LOCATOR_ORDER_MODAL = By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ']"
+    LOCATOR_LABEL_ON_ORDER_PAGE = By.XPATH, "//div[contains(text(), 'Для кого самокат')]"
+
 
 
 class OrderPageHelper(BasePage):
@@ -80,6 +80,11 @@ class OrderPageHelper(BasePage):
     def check_success_order(self):
         order_modal = self.find_element(OrderPageLocators.LOCATOR_ORDER_MODAL)
         return order_modal.text
+
+    @allure.step('Проверяем, что открылась страница заказа')
+    def check_order_page_transition(self):
+        main_text_in_order_page = self.find_element(OrderPageLocators.LOCATOR_LABEL_ON_ORDER_PAGE)
+        return main_text_in_order_page.text
 
 
     def create_order(self, first_name, last_name, adress, phone,data,comment):
