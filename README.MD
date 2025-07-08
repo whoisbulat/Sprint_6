@@ -22,4 +22,3 @@ pytest tests/ --alluredir=allure_results
 View Report
 bash
 allure serve allure_results
-
