@@ -1,27 +1,25 @@
-тесты на https://qa-scooter.praktikum-services.ru/
+# 🛴 Yandex Scooter UI & API Tests
 
-Для запуска проекта необходимы следующие зависимости и библиотеки:
+Automated test suite for [Yandex Scooter](https://qa-scooter.praktikum-services.ru/) service
 
-# (- Python)
+![Python](https://img.shields.io/badge/Python-3.7%2B-blue)
+![Pytest](https://img.shields.io/badge/Pytest-7.4%2B-orange)
+![Selenium](https://img.shields.io/badge/Selenium-4.0%2B-yellowgreen)
+![Allure](https://img.shields.io/badge/Allure_Report-supported-ff69b4)
 
-# (- Библиотека pytest для запуска тестов)
+## 🚀 Quick Start
 
-# (- selenium)
+### Prerequisites
+- Python 3.7+
+- Chrome/Firefox browser
 
-# (- webdriver-manager)
+### Installation
+```bash
+pip install -r requirements.txt
+Run Tests
+bash
+pytest tests/ --alluredir=allure_results
+View Report
+bash
+allure serve allure_results
 
-# allure-pytest  
-
-В файле [conftest.py] - лежит фикстура
-В папке [pages] - локаторы и методы
-в папке - [allure_results] - сгенерированный Allure-отчёт
-
-Тесты лежат в папке tests:
-
-# [test_logo.py]
-
-# [test_order.py]
-
-# [test_questions.py]
-
-# Sprint_6
