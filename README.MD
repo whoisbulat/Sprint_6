@@ -1,4 +1,4 @@
-# 🛴 Yandex Scooter UI & API Tests
+# 🛴 Yandex Scooter UI Tests
 
 Automated test suite for [Yandex Scooter](https://qa-scooter.praktikum-services.ru/) service
 
